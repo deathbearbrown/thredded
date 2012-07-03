@@ -15,7 +15,7 @@ class Post  < ActiveRecord::Base
   belongs_to :user,   :counter_cache => true
   has_many   :attachments
   accepts_nested_attributes_for :attachments
-  validates_presence_of :content, :messageboard_id
+  validates_presence_of :content, :messageboard_id, :topic_id
   attr_accessible :content, :user, :ip, :filter, :topic, :messageboard, :attachments_attributes
   before_save :set_user_email
   after_create  :modify_parent_topic

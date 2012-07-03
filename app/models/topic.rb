@@ -1,7 +1,4 @@
 class Topic < ActiveRecord::Base
-
-  paginates_per 50 if self.respond_to?(:paginates_per)
-
   # associations
   has_many   :posts, :include => :attachments
   has_many   :topic_post_searches
@@ -17,19 +14,17 @@ class Topic < ActiveRecord::Base
   validates_presence_of [:last_user_id, :messageboard_id]
   validates_numericality_of :posts_count
 
-  # lock it down
-  attr_accessible :type, :title, :user, :last_user, :sticky, :locked, :usernames, :posts_attributes, :messageboard
+  # Accessible
+  attr_accessible :last_user, :locked, :messageboard, :posts_attributes,
+    :sticky, :title, :type, :user, :usernames
 
   # scopes
   default_scope order('updated_at DESC')
+  scope :stuck, where('sticky = true')
+  scope :unstuck, where('sticky = false OR sticky IS NULL')
 
-  def self.stuck
-    where('sticky = true')
-  end
-
-  def self.unstuck
-    where('sticky = false OR sticky IS NULL')
-  end
+  # Gems
+  paginates_per 50 if self.respond_to?(:paginates_per)
 
   # misc
   accepts_nested_attributes_for :posts, :reject_if => :updating?
@@ -50,11 +45,12 @@ class Topic < ActiveRecord::Base
     SQL
 
     search_words = query.sub(' ', '|')
-    self.find_by_sql [sql, messageboard_id, search_words, messageboard_id, search_words]
+    self.find_by_sql [sql, messageboard_id, search_words, messageboard_id,
+      search_words]
   end
 
   # TODO: Remove permission column from Topics table
-  def public? 
+  def public?
     self.class.to_s == "Topic"
   end
 
@@ -74,7 +70,11 @@ class Topic < ActiveRecord::Base
   end
 
   def users_to_sentence
-    @users_to_sentence ||= self.users.collect{ |u| u.name.capitalize }.to_sentence if self.class == "PrivateTopic" && self.users
+    if self.class == "PrivateTopic" && self.users
+      @users_to_sentence ||= self.users.collect{ |user|
+        user.name.capitalize
+      }.to_sentence
+    end
   end
 
   def self.inherited(child)
@@ -87,11 +87,10 @@ class Topic < ActiveRecord::Base
   end
 
   def self.select_options
-    subclasses.map{ |c| c.to_s }.sort
+    subclasses.map{ |klass| klass.to_s }.sort
   end
 
   def updating?
     self.id.present?
   end
-
 end

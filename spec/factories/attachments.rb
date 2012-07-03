@@ -9,9 +9,11 @@ FactoryGirl.define do
     factory :pdfpng do
       attachment  { fixture_file_upload('spec/samples/pdf.png', 'image/png') }
     end
+
     factory :txtpng do
       attachment  { fixture_file_upload('spec/samples/txt.png', 'image/png') }
     end
+
     factory :zippng do
       attachment  { fixture_file_upload('spec/samples/zip.png', 'image/png') }
     end
