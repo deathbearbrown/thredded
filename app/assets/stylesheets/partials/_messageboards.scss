@@ -7,7 +7,6 @@
   float: left;
   line-height: 28px;
   overflow: hidden; 
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
@@ -36,8 +35,6 @@ section#contentwrap #messageboards {
       padding-left: 4%;
 
       h2 { font-size: 14px; font-weight: normal; margin-bottom: 4px; }
-      h2 a { text-decoration: none; font-weight: bold; }
-      h2 a:hover { text-decoration: underline; }
     }
 
     &.private header {
@@ -61,9 +58,7 @@ section#contentwrap #messageboards {
       }
 
       a {
-        color: #333;
         font-size: 12px;
-        text-decoration: none;
       }
 
       cite {
@@ -77,7 +72,4 @@ section#contentwrap #messageboards {
   border: solid 1px #ddd;
   border-top: none;
   padding: 1%;
-
-  a { font-weight: bold; text-decoration: none; }
-  a:hover { text-decoration: underline; }
 }

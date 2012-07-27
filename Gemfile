@@ -51,7 +51,6 @@ group :test, :cucumber do
 end
 
 group :development do
-  gem 'debugger'
   gem 'faker'
   gem 'foreman'
   gem 'git_remote_branch'

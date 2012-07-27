@@ -52,7 +52,6 @@ GEM
     chunky_png (1.2.5)
     client_side_validations (3.1.4)
     coderay (1.0.6)
-    columnize (0.3.6)
     compass (0.11.7)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -69,13 +68,6 @@ GEM
       nokogiri (>= 1.5.0)
     daemons (1.1.8)
     database_cleaner (0.7.1)
-    debugger (1.0.0)
-      columnize (>= 0.3.1)
-      debugger-linecache
-      debugger-ruby_core_source
-    debugger-linecache (1.0.1)
-      debugger-ruby_core_source
-    debugger-ruby_core_source (1.0.1)
     devise (1.5.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -163,7 +155,7 @@ GEM
     net-ssh (2.5.2)
     nokogiri (1.5.0)
     orm_adapter (0.0.6)
-    pg (0.13.1)
+    pg (0.14.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -270,7 +262,6 @@ DEPENDENCIES
   compass
   cucumber-rails (= 1.2.1)
   database_cleaner
-  debugger
   devise (= 1.5.3)
   escape_utils (= 0.2.3)
   factory_girl_rails (= 3.4.0)

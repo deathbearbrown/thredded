@@ -1,0 +1,50 @@
+body {
+  color:#53312c;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight:normal;
+  font-family:$museoBold;
+}
+a { 
+  text-decoration:none; 
+  color: #B24227; 
+  &:hover {
+    border-bottom: 1px dashed #B24227;
+  }
+  font-family: $museo;
+}
+
+.button {
+  border: {
+    top:{
+      color:#33A7AB;
+    }
+    right:{
+      color:#2B8E92;
+    }
+    left:{
+      color:#2B8E92;
+    }
+    bottom:{
+      color:#247679;
+    }
+    style: solid;
+    width: 1px;
+    radius: 2px;
+  } 
+
+  font-size: 14px;
+  background-color: #33a8ac;
+  color: white;
+  display: block;
+  padding: 6px;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-family: 'MuseoRegular';
+  text-shadow: #247476 1px 1px 0; 
+  &:hover {
+    border:{
+      style:solid;
+    }
+  }
+}

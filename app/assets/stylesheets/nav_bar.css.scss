@@ -1,14 +1,11 @@
 #site_wide {
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #393939), color-stop(100%, #1a1a1a));
-  background-image: -moz-linear-gradient(top, #393939 0%, #1a1a1a 100%);
-  background-image: linear-gradient(top, #393939 0%, #1a1a1a 100%);
-  border-bottom: solid 3px #999;
-  height: 24px;
-  padding: 12px 0 12px 2.5%;
+  height: 50px;
+  padding:15px 15px 15px 50px;
   margin: 0;
   width: 100%;
 
   h1 {
+
     background: transparent;
     display: block;
     float: left;
@@ -16,8 +13,20 @@
     margin-right: 20px;
 
     a {
-      color: white;
-      text-decoration: none;
+      height: 45px;
+      width:205px;
+      background: transparent url(/assets/logo.png) no-repeat 0 0;
+      display: block; 
+      text-indent: -999em; 
+      overflow: hidden; 
+      background-repeat: no-repeat; 
+      text-align: left; 
+      direction: ltr;
+      &:hover {
+        border: {
+          style:none;
+        }
+      }
     }
   }
 
@@ -29,19 +38,7 @@
       font-family: Arial, Verdana, Tahoma, Helvetica, sans-serif;
 
       a {
-        font-size: 11px;
-        background-color: #535353;
-        color: white;
-        display: block;
-        padding: 6px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        -moz-border-radius: 7px;
-        -webkit-border-radius: 7px;
-        -ms-border-radius: 7px;
-        border-radius: 7px;
-        text-shadow: black 1px 1px 0;
+        @extend .button;
       }
     }
   }

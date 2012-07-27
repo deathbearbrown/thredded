@@ -7,14 +7,6 @@
   .new_topic, .new_private_topic, .reply_to_topic, .edit_topic {
     margin-bottom: 10px;
 
-    a {
-      text-decoration: none;
-      text-transform: lowercase;
-
-      &:hover {
-        border-bottom: dotted 1px;
-      }
-    }
   }
 
   .online {

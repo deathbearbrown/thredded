@@ -418,8 +418,6 @@ section#contentwrap {
 }
 /* line 24, sass/partials/_posts.scss */
 #topics_posts #content article header a {
-  color: #999;
-  text-decoration: none;
   margin-bottom: 10px;
   display: block;
 }

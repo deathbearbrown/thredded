@@ -6,10 +6,59 @@
 */
 @import "compass";
 
+
+@font-face {
+    font-family: 'MuseoRegular';
+    src: url('fonts/museo300-regular.eot');
+    src: url('fonts/museo300-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo300-regular.woff') format('woff'),
+         url('fonts/museo300-regular.ttf') format('truetype'),
+         url('fonts/museo300-regular.svg#Museo300Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MuseoBold';
+    src: url('fonts/museo500-regular.eot');
+    src: url('fonts/museo500-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo500-regular.woff') format('woff'),
+         url('fonts/museo500-regular.ttf') format('truetype'),
+         url('fonts/museo500-regular.svg#Museo500Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MuseoBlack';
+    src: url('fonts/museo700-regular.eot');
+    src: url('fonts/museo700-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo700-regular.woff') format('woff'),
+         url('fonts/museo700-regular.ttf') format('truetype'),
+         url('fonts/museo700-regular.svg#Museo700Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 $sans-serif-font-family: 'Lucida Grande','Trebuchet MS',Arial,Helvetica,sans-serif;
 $serif-font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 
+
+
+$museo: 'MuseoRegular', Georgia, Cambria, "Times New Roman", Times, serif;
+$museoBold :'MuseoBold', Georgia, Cambria, "Times New Roman", Times, serif;
+$museoBlack: 'MuseoBlack', Georgia, Cambria, "Times New Roman", Times, serif;
+
+
+
+
+
 @import "partials/boilerplate";
+@import "partials/typography";
 @import "partials/layout";
 @import "partials/flash_messages";
 @import "partials/header";

@@ -99,8 +99,6 @@
     .updated_by a {
       font-style: normal;
       font-weight: bold;
-      color: #999;
-      text-decoration: none;
     }
 
     .timeago:after {
@@ -119,7 +117,7 @@
     @extend .submit_button;
     text-decoration: none;
     display: inline-block;
-    margin: 12px 29px;
+    margin: 12px 0;
   }
 }
 
