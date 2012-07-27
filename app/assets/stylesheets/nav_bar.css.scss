@@ -1,17 +1,19 @@
 #site_wide {
   height: 50px;
-  padding:15px 15px 15px 50px;
+  padding:15px 25px;
   margin: 0;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 
   h1 {
 
     background: transparent;
     display: block;
-    float: left;
+    float: right;
     line-height: 24px;
-    margin-right: 20px;
-
     a {
       height: 45px;
       width:205px;
